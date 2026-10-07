@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SoundMorph - Đổi Giọng</string>
+    <string name="tagline">Biến đổi giọng nói cực đỉnh &amp; chia sẻ tức thì</string>
+    <string name="tap_to_record">Chạm để bắt đầu ghi âm</string>
+    <string name="recording">Đang ghi âm...</string>
+    <string name="stop_recording">Dừng ghi âm</string>
+    <string name="choose_effect">Chọn hiệu ứng biến đổi giọng</string>
+    <string name="record_new">Ghi âm lại</string>
+    <string name="save_audio">Lưu âm thanh</string>
+    <string name="share_audio">Chia sẻ</string>
+    <string name="permission_required">Cần cấp quyền micro để ghi âm giọng nói</string>
+    <string name="grant_permission">Cấp quyền</string>
+    <string name="processing">Đang áp dụng hiệu ứng...</string>
+    <string name="saved_successfully">Đã lưu âm thanh thành công!</string>
+    <string name="save_failed">Lỗi khi lưu file</string>
+    <string name="share_title">Chia sẻ giọng đổi với bạn bè qua</string>
+</resources>

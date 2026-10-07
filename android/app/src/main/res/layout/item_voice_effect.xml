@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/card_dark"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/card_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="14dp">
+
+        <!-- Effect Emoji / Icon -->
+        <TextView
+            android:id="@+id/tvEffectEmoji"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:text="🤖"
+            android:background="@drawable/bg_emoji_circle" />
+
+        <!-- Title & description -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvEffectTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Người Máy (Robot)"
+                android:textColor="@color/text_white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEffectDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hiệu ứng kim loại công nghệ cao"
+                android:textColor="@color/text_muted"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Actions: Play / Save / Share -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlayEffect"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="Phát thử"
+            android:text="▶"
+            android:textColor="@color/text_white"
+            android:textSize="16sp"
+            app:backgroundTint="@color/purple_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveEffect"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="Lưu âm thanh"
+            android:text="💾"
+            android:textSize="14sp"
+            android:textColor="@color/cyan_light" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShareEffect"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="2dp"
+            android:contentDescription="Chia sẻ"
+            android:text="📤"
+            android:textSize="14sp"
+            android:textColor="@color/cyan_light" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

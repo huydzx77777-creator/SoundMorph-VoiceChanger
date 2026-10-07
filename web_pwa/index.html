@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SoundMorph - Ứng Dụng Đổi Giọng Nói</title>
+  <meta name="description" content="Ứng dụng biến đổi giọng nói với 14+ hiệu ứng cực đỉnh: Sóc chuột, Người máy, Quái vật, Reverb, Tua ngược...">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%22><text y=%2226%22 font-size=%2224%22>🎙️</text></svg>">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-badge">🎙️ SoundMorph</div>
+      <h1 class="app-title">Đổi Giọng Nói Android</h1>
+      <p class="app-subtitle">Ghi âm &bull; Biến đổi giọng &bull; Nghe thử &bull; Lưu file WAV &bull; Chia sẻ</p>
+    </header>
+
+    <!-- Main Recording Area -->
+    <section class="record-section">
+      <!-- Waveform Visualizer -->
+      <canvas id="visualizerCanvas" class="visualizer" width="340" height="70"></canvas>
+
+      <!-- Recording Timer -->
+      <div id="recordTimer" class="timer">00:00</div>
+      <div id="statusText" class="status-text">Chạm nút Mic đỏ để bắt đầu ghi âm</div>
+
+      <!-- Record Button -->
+      <div class="mic-button-wrapper">
+        <button id="recordBtn" class="mic-btn" aria-label="Ghi âm">
+          <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" y1="19" x2="12" y2="23"/>
+            <line x1="8" y1="23" x2="16" y2="23"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- File Import Alternative -->
+      <div class="import-wrapper">
+        <label for="audioFileInput" class="btn-secondary">
+          📁 Hoặc chọn file âm thanh từ máy
+        </label>
+        <input type="file" id="audioFileInput" accept="audio/*" style="display:none;">
+      </div>
+    </section>
+
+    <!-- Effects Section (Revealed after audio is recorded/loaded) -->
+    <section id="effectsSection" class="effects-section" style="display:none;">
+      <div class="section-header">
+        <h2>✨ Danh sách 15 hiệu ứng giọng nói</h2>
+        <button id="reRecordBtn" class="btn-text">🔄 Ghi âm lại</button>
+      </div>
+
+      <div class="audio-player-bar" id="playerBar">
+        <span id="playingEffectLabel">Chưa chọn hiệu ứng</span>
+        <button id="stopAllBtn" class="btn-small-stop" style="display:none;">⏹ Dừng</button>
+      </div>
+
+      <div class="effects-grid" id="effectsGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Footer Guide -->
+    <footer class="app-footer">
+      <p>💡 <b>Mẹo cài đặt APK trên Android:</b> Xem hướng dẫn trong file <code>HUONG_DAN_CAI_DAT_APK.md</code> hoặc thêm trang này vào Màn hình chính.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
